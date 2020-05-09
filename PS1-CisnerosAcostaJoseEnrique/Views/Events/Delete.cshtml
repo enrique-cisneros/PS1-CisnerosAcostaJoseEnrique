@@ -1,0 +1,55 @@
+﻿@model PS1_CisnerosAcostaJoseEnrique.Models.Event
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estás seguro que quieres borrar esto?</h3>
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre de Evento
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreevento)
+        </dd>
+
+        <dt>
+            Fecha del Evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaevento)
+        </dd>
+
+        <dt>
+            Artista invitados
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.artistas)
+        </dd>
+
+        <dt>
+            Comida del evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comida)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a eventos", "Index")
+        </div>
+    }
+</div>

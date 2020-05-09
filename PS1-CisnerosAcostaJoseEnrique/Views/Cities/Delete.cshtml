@@ -1,0 +1,40 @@
+﻿@model PS1_CisnerosAcostaJoseEnrique.Models.City
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estás seguro que quieres borrar esto?</h3>
+<div>
+    <h4>Ciudad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre de Ciudad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreciudad)
+        </dd>
+
+        <dt>
+            Pais
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pais)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a ciudades", "Index")
+        </div>
+    }
+</div>

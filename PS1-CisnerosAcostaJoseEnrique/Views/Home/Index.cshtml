@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <img src="~/Content/img/logoitt.png" class="img-rounded center-block">
+        <h2 class="text-center">PRÁCTICA SEMANAL 1</h2>
+        <h2 class="text-center">UNIDAD 3</h2>
+        <h3 class="lead text-center">DESARROLLO DE APLICACIONES WEB</h3>
+        <h3 class="lead text-center">JUAN MANUEL HERNANDEZ MARTINEZ</h3>
+    </div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Contacto</h2>
+        <p>
+            Cisneros Acosta Jose Enrique, más información click a Contacto en la parte superior en Contact
+        </p>
+        <img src="~/Content/img/fotomia.jpg" width="100" height="100">
+        @Html.ActionLink("Contacto", "Contact", "Home")
+    </div>
+    <div class="col-md-4">
+        <h2>Sobre la práctica</h2>
+        <p>Si gusta saber sobre que trata la página dele click en About o en la parte superior darle click en About</p>
+        <img src="~/Content/img/web.png" width="100" height="100">
+        @Html.ActionLink("About", "About", "Home")
+    </div>
+    <div class="col-md-4">
+        <h2>Ciudades</h2>
+        <p>Si gusta agregar una ciudad dele click en Agregar ciudad o en la parte superior darle click en Ciudades</p>
+        <img src="~/Content/img/ciudad.jpg" width="100" height="100">
+        @Html.ActionLink("Agregar ciudad", "Index", "Cities")
+    </div>
+</div>

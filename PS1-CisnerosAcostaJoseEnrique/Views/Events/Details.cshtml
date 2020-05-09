@@ -1,0 +1,50 @@
+﻿@model PS1_CisnerosAcostaJoseEnrique.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Eventos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del Eventos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreevento)
+        </dd>
+
+        <dt>
+            Fecha del evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaevento)
+        </dd>
+
+        <dt>
+            Artistas invitados
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.artistas)
+        </dd>
+
+        <dt>
+            Comida del evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comida)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar a eventos", "Index")
+</p>

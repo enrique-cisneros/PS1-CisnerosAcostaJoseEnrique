@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PS1_CisnerosAcostaJoseEnrique.Models.City>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ciudades</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva ciudad", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Ciudad
+        </th>
+        <th>
+            Pais
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pais)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+<img src="~/Content/img/cities.jpg" class="center-block">
